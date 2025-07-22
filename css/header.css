@@ -19,9 +19,13 @@ header {
 }
 
 .header-wrapper {
-    position: relative;
-    z-index: 20;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid #ccc;
 }
+
 
 .top-bar {
     display: flex;
@@ -96,10 +100,8 @@ header {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--bg-light);
     padding: 12px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     justify-content: center;
     align-items: center;
     gap: 0;
@@ -138,4 +140,51 @@ header {
 
 .floating-search.show {
     display: flex;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.6) 0%,
+            rgba(255, 255, 255, 0.3) 60%,
+            rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+@media screen and (max-width: 600px) {
+    .logo img {
+        height: 32px;
+    }
+
+    .logo span {
+        font-size: 16px;
+    }
+
+    .header-buttons {
+        gap: 8px;
+    }
+
+    .floating-search{
+        border-radius: 0;
+    }
+
+    .header-buttons button {
+        font-size: 14px;
+    }
+
+    .floating-search input {
+        height: 40px;
+        font-size: 14px;
+        border-radius: 6px 0 0 6px;
+    }
+
+    .floating-search button {
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+
+    .dropdown button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
 }
