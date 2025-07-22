@@ -13,19 +13,21 @@
 <body>
     <div class="header-wrapper">
         <header>
-            <div class="top-bar">
+            <nav class="navbar">
                 <div class="logo">
                     <img src="assets/MasterEagle.png" alt="Logo" />
                     <span>MasterMart</span>
                 </div>
-                <div class="header-buttons">
+                <div class="nav-actions">
                     <button id="searchToggleBtn" title="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                     <button title="Cart"><i class="fa-solid fa-shopping-cart"></i></button>
                     <button title="Wishlist"><i class="fa-solid fa-heart"></i></button>
                     <div class="profile-menu">
-                        <button onclick="toggleDropdown(event)"><i class="fa-solid fa-user"></i></button>
+                        <button onclick="toggleDropdown(event)">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
                         <div class="dropdown" id="profileDropdown">
                             <button onclick="alert('My Profile')">My Profile</button>
                             <button onclick="alert('Orders')">Orders</button>
@@ -34,8 +36,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </nav>
         </header>
+
         <div class="floating-search" id="floatingSearch">
             <input type="text" placeholder="Search products..." />
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
