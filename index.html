@@ -14,7 +14,7 @@
     <div class="header-wrapper">
         <header>
             <nav class="navbar">
-                <div class="logo">
+                <div class="logo" onclick="gotoHome()">
                     <img src="assets/MasterEagle.png" alt="Logo" />
                     <span>MasterMart</span>
                 </div>
@@ -29,10 +29,13 @@
                             <i class="fa-solid fa-user"></i>
                         </button>
                         <div class="dropdown" id="profileDropdown">
-                            <button onclick="alert('My Profile')">My Profile</button>
-                            <button onclick="alert('Orders')">Orders</button>
-                            <button onclick="toggleTheme()">Light/Dark</button>
-                            <button onclick="alert('Logout')">Logout</button>
+                            <button onclick="alert('My Profile')"><i class="fa-solid fa-user"></i> My Profile</button>
+                            <button onclick="alert('Orders')"><i class="fa-solid fa-box"></i> Orders</button>
+                            <hr>
+                            <button onclick="toggleTheme()"><i class="fa-solid fa-moon"></i> Light/Dark</button>
+                            <hr>
+                            <button onclick="alert('Logout')" id="logout"><i
+                                    class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
                         </div>
                     </div>
                 </div>
