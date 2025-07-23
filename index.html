@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MasterMart</title>
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/e05d24f6c7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
 </head>
 
 <body>
@@ -50,6 +53,14 @@
     </div>
 
     <main>
+        <section class="featured-products">
+            <div class="header">
+                <h2>Featured Products</h2>
+            </div>
+            <div class="product-list" id="productList">
+                <!-- Products will be injected here by JS -->
+            </div>
+        </section>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, exercitationem. Error, illum. Optio accusamus
         magni maiores minus aspernatur excepturi labore quia ratione. Magni accusantium, quia neque omnis illum
         officiis. Rem.
@@ -181,10 +192,12 @@
     </main>
 
     <footer class="footer">
-        <p>© <span class="mastereagle" onclick="devFolio()">MasterEagle</span>. All rights reserved. Built with <i class="fas fa-heart"></i></p>
+        <p>© <span class="mastereagle" onclick="devFolio()">MasterEagle</span>. All rights reserved. Built with <i
+                class="fas fa-heart"></i></p>
     </footer>
 
     <script src="js/header.js"></script>
+    <script src="js/products.js"></script>
 </body>
 
 </html>
