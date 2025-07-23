@@ -63,3 +63,7 @@ document.addEventListener("click", function (e) {
         }
     }
 });
+
+function devFolio() {
+    window.open('https://neelsavsani.vercel.app', '_blank');
+}
