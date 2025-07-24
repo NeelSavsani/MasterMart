@@ -41,21 +41,18 @@
     --purplee-light: #9361ea;
     --pink: #ff69b4;
 
+    --products-card-light-border: #e5e7eb;
+
+    --category-light-mode: #27272a;
+    --category-text-light-mode: #fafafa;
     --bg-light: #ffffff;
-    --bg-dark: #07080a;
+    --bg-dark: #09090b;
     --border-color: #dfeaff;
     --border-dark: #3c3c3c;
     --button-secondary-hover-bg: #f0f0f0;
     --footer-light-bg: #f3f4f6;
     --star-color: gold;
     --out-of-stock: #555;
-}
-
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: var(--bg-light);
-    color: var(--black);
 }
 
 body.dark-mode {
@@ -87,12 +84,18 @@ body.dark-mode {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--products-card-light-border);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
+}
+
+.dark-mode .product-card {
+    background: var(--bg-dark);
+    border: 1px solid var(--category-light-mode);
 }
 
 .product-card .badge {
@@ -171,14 +174,27 @@ body.dark-mode {
     display: inline-block;
 }
 
+.dark-mode .product-card .category {
+    color: var(--category-text-light-mode);
+    background: var(--category-light-mode);
+}
+
 .product-card h3 {
     margin: 8px 14px 4px;
     font-size: 15px;
     font-weight: 500;
     color: var(--black);
-    white-space: nowrap;
+    overflow-wrap: anywhere;
+    /* Optional for extra control: */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
+}
+
+.dark-mode .product-card h3,
+.dark-mode .product-card .price {
+    color: var(--white);
 }
 
 .product-card .rating {
@@ -196,7 +212,7 @@ body.dark-mode {
 .product-card .price {
     margin: 6px 14px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--black);
 }
 
@@ -210,6 +226,7 @@ body.dark-mode {
 
 .product-card button {
     margin: 14px;
+    margin-top: auto;
     padding: 10px;
     background: var(--purplee);
     color: white;

@@ -38,6 +38,8 @@
     --purple: #6b5b95;
     --pink: #ff69b4;
 
+    --category-light-mode: #27272a;
+
     --bg-light: #ffffff;
     --bg-dark: #07080A;
     --border-color: #dfeaff;
@@ -52,6 +54,7 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: var(--bg-light);
     color: var(--black);
+    transition: all 0.3s;
 }
 
 body.dark-mode {
@@ -61,7 +64,7 @@ body.dark-mode {
 
 header {
     border-bottom: 1px solid var(--border-color);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(35px);
     padding: 12px 20px;
     color: var(--black);
     position: relative;
